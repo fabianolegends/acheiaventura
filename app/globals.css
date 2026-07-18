@@ -10,3 +10,84 @@
 .malakoffMap{background-image:linear-gradient(#07121f22,#07121f44),url("/malakoff/capa.webp");background-size:cover;background-position:center}.malakoffMap .contours{opacity:.35}.routePhotoStrip{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-top:7px}.routePhotoStrip img{width:100%;height:82px;object-fit:cover;border-radius:10px}.realRouteBadge{display:flex;align-items:center;gap:8px;background:#e7f3e9;border:1px solid #b9d8c0;border-radius:13px;padding:11px;margin-top:10px}.realRouteBadge span{background:#2e8c56;color:white;border-radius:6px;padding:6px;font-size:7px;font-weight:950}.realRouteBadge strong{font-size:10px}.realRouteBadge small{margin-left:auto;font-size:7px;color:var(--muted);max-width:90px;text-align:right}.fogAlert{background:#e6e9ec;border-left:4px solid #677a88;border-radius:9px;padding:12px;margin-top:11px}.fogAlert b{font-size:9px;color:#3f5361}.fogAlert p{font-size:9px;line-height:1.4;color:#5c6870;margin-top:5px}.gpxDownload{display:block;text-align:center;background:#dce4e8;color:var(--blue);border-radius:11px;padding:12px;margin-top:9px;text-decoration:none;font-size:9px;font-weight:950}.routeHeader{position:relative;overflow:hidden}.routeHeader:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#07121fee,#07121f99),url("/malakoff/capa.webp") center/cover;opacity:.65}.routeHeader>*{position:relative;z-index:1}
 .noveMap{background-image:linear-gradient(#07121f22,#07121f44),url("/nove-colonias/linha-imperial.jpg");background-size:cover;background-position:center}.noveMap .contours{opacity:.25}.route-nove .routeHeader:before{background:linear-gradient(90deg,#07121fee,#07121f88),url("/nove-colonias/vinhedo.jpg") center/cover}.city-nove .landscape{background:linear-gradient(145deg,#2f5a48,#b5a266)}
 @media (min-width:700px){.appShell{margin-top:24px;margin-bottom:24px;min-height:calc(100vh - 48px);border-radius:28px}.bottomNav{bottom:24px;border-radius:0 0 28px 28px}.cover{padding-bottom:42px}}
+
+/* Desktop experience — preserves the mobile product below 980px */
+@media (min-width:980px){
+  body{background:linear-gradient(135deg,#d9dfe1 0,#eef0ee 46%,#cbd2d5 100%)}
+  .appShell{width:min(calc(100% - 48px),1280px);max-width:none;margin:24px auto;min-height:calc(100vh - 48px);border-radius:26px;padding-bottom:0;box-shadow:0 28px 90px #07121f25}
+
+  /* Full desktop opening screen */
+  .appShell.cover{display:grid;grid-template-columns:minmax(420px,1fr) minmax(420px,.9fr);grid-template-rows:auto 1fr auto auto auto auto auto;column-gap:60px;align-items:end;padding:46px 58px 44px;min-height:calc(100vh - 48px)}
+  .cover .brand{grid-column:1;grid-row:1;align-self:start}
+  .coverSpacer{grid-column:2;grid-row:1/8;align-self:stretch;min-height:620px;border-radius:24px;background:linear-gradient(180deg,#07121f18,#07121fd9),url('/malakoff/capa.webp') center/cover;box-shadow:inset 0 0 0 1px #ffffff18,0 22px 55px #0005;position:relative}
+  .coverSpacer:after{content:'ROTA MALAKOFF · NOVA PETRÓPOLIS';position:absolute;left:24px;bottom:22px;font-size:9px;letter-spacing:.16em;font-weight:950;color:#fff}
+  .coverKicker{grid-column:1;grid-row:3;margin-top:60px}
+  .cover h1{grid-column:1;grid-row:4;font-size:76px;max-width:650px;margin:18px 0 24px}
+  .cover>p{grid-column:1;grid-row:5;max-width:560px;font-size:17px}
+  .cityPills{grid-column:1;grid-row:6;margin:28px 0 22px}
+  .cover .mainButton{grid-column:1;grid-row:7;max-width:430px}
+  .coverFoot{grid-column:1;grid-row:8;max-width:430px;text-align:left}
+
+  /* Product shell */
+  .tabPage{display:grid;grid-template-columns:330px minmax(0,1fr);min-height:calc(100vh - 48px);padding-top:74px}
+  .sectionHeader{position:sticky;top:98px;align-self:start;min-height:calc(100vh - 122px);padding:46px 34px;border-radius:0 0 0 26px;background:linear-gradient(165deg,#07121f,#102d49)}
+  .sectionHeader .brandOfficial img{width:62px;height:62px}
+  .sectionHeader .eyebrow{margin-top:90px}
+  .sectionHeader h1{font-size:47px;margin:14px 0 18px}
+  .sectionHeader>p{font-size:14px;max-width:245px}
+  .pageContent{width:100%;max-width:950px;margin:0 auto;padding:38px 38px 70px}
+  .titleRow{margin-top:34px}
+  .titleRow h2{font-size:26px}
+
+  /* Desktop navigation */
+  .bottomNav{top:24px;bottom:auto;left:50%;transform:translateX(-50%);width:min(calc(100% - 48px),1280px);height:74px;border:0;border-bottom:1px solid #ffffff14;border-radius:26px 26px 0 0;background:#07121ff5;justify-content:flex-end;gap:8px;padding:8px 24px 8px 350px}
+  .bottomNav:before{content:'ACHEI AVENTURA';position:absolute;left:34px;color:white;font-size:16px;letter-spacing:.12em;font-weight:950}
+  .bottomNav button{min-width:88px;height:52px;border-radius:12px;color:#9cabb8;justify-content:center;transition:.2s}
+  .bottomNav button:hover{background:#ffffff0d;color:white}
+  .bottomNav button.active{background:#ef51481c;color:#ff8a7a}
+  .bottomNav button span{font-size:18px}
+  .bottomNav button small{font-size:8px}
+
+  /* Cards use the available screen width */
+  .finderCard{padding:25px 28px}
+  .finderCard h2{font-size:29px}
+  .ecosystemBanner{padding:22px 25px}
+  .cityScroller{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));overflow:visible;gap:14px}
+  .cityCard{width:100%;min-width:0;flex:none}
+  .cityCard:nth-child(n+7){display:none}
+  .landscape{height:132px}
+  .quickGrid{grid-template-columns:repeat(4,1fr);gap:12px}
+  .quick{min-height:135px}
+  .readyCard{padding:22px 24px}
+
+  /* Route, map and community surfaces */
+  .mapGraphic{height:430px}
+  .routePhotoStrip img{height:130px}
+  .dataCard{font-size:13px}
+  .routePage:not(.driving){display:grid;grid-template-columns:330px minmax(0,1fr);min-height:calc(100vh - 48px)}
+  .routePage:not(.driving) .routeHeader{min-height:calc(100vh - 48px);padding:58px 34px;border-radius:26px 0 0 26px}
+  .routePage:not(.driving)>.pageContent{max-width:900px;padding:48px}
+  .routeHeader h1{font-size:48px}
+  .routeStats{margin-top:32px}
+  .vehicleGps{width:100%;min-height:calc(100vh - 48px);border-radius:26px}
+  .gpsInstruction{left:28px;right:28px;top:24px}
+  .gpsFooter{left:22px;right:22px;bottom:68px;border-radius:20px}
+  .simulateDrive{left:28px;right:28px;bottom:16px}
+  .socialContent{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(240px,.65fr);gap:18px;align-items:start}
+  .socialContent>.stories,.socialContent>.shareBox,.socialContent>.newAchievement{grid-column:1/-1}
+  .tripCard{display:grid;grid-template-columns:1fr 1.1fr}
+  .tripVisual{height:auto;min-height:300px}
+  .tripCopy{padding:28px}
+  .postPhoto{height:310px}
+  .modalShade{padding:40px}
+  .ratingModal{width:min(100%,520px)}
+  .hubShade{padding:24px}
+  .hub{width:min(100%,1080px);height:calc(100vh - 48px);border-radius:26px}
+  .hubBody{max-width:900px;margin:auto;padding:44px 50px 70px}
+  .hubBody>h1{font-size:50px}
+}
+
+@media (min-width:1250px){
+  .cityScroller{grid-template-columns:repeat(3,1fr)}
+  .pageContent{padding-left:48px;padding-right:48px}
+}
